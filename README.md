@@ -34,6 +34,10 @@ ngnix-static-poc/
 <img width="1415" height="693" alt="wireframe" src="https://github.com/user-attachments/assets/58f4c760-29b3-4f52-a613-0c383437c495" />
 Este es el wireframe de la web ya actualizada para el cliete Guadalquivir Cloud Tech.
 
+## Landing ya funcionando
+<img width="1919" height="997" alt="image" src="https://github.com/user-attachments/assets/80ee47a9-a398-4933-b520-4c775c2943aa" />
+
+
 
 ## 🧪 Validación y Evidencias del Despliegue
 
