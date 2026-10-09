@@ -28,14 +28,30 @@ ngnix-static-poc/
 │   └── index.html            # Documento principal HTML5
 ├── docker-compose.yml        # Configuración del contenedor y mapeo de volúmenes/puertos
 └── README.md                 # Documentación del proyecto
-## Validación 
-* Una vez he creado todos los archivos procedo a subir los contenedores con docker compose up -d
-<img width="1524" height="1079" alt="Captura de pantalla 2026-10-09 092523" src="https://github.com/user-attachments/assets/23229e27-12b3-4a78-bcfb-7a4dc5d47c86" />
-* Y ya está corriendo. Tenia un problema que ya previamente tenía otro contenedor en el mismo puerto por lo que lo he tenido que cerrar con docker stop $(docker ps -q), y una vez cerrado ya he podido subirlo sin problema
-<img width="960" height="1050" alt="Captura de pantalla 2026-10-09 092537" src="https://github.com/user-attachments/assets/6a09b386-b38c-4423-a2a1-534b553d323b" />
-* Una vez accede a http://localhost:8080/ , se ve que funciona todo en el contenedor
-<img width="642" height="277" alt="Captura de pantalla 2026-10-09 093030" src="https://github.com/user-attachments/assets/87662c85-b689-40fc-8b65-f9bb23a491e9" />
-* Para validad la seguridad y la configuración del servidor web, he ejecutado en la terminal el comando curl.exe -I http://localhost:8080. Esto me ha permitido realizar una petición de tipo HEAD a la infraestructura, solicitando solo las cabeceras HTTP del servidor sin descargar el cuerpo de la página. De lo mas relevante se puede observar es que la versión de nginx esta oculta gracias a sever_tockens off; que añadi en conf/default.
+---
 
+## 🧪 Validación y Evidencias del Despliegue
+
+### 1. Puesta en Marcha del Contenedor
+
+Una vez creados todos los archivos del proyecto, procedemos a levantar los servicios en segundo plano con el comando `docker compose up -d`.
+
+<img width="1524" height="1079" alt="Captura de pantalla 2026-10-09 092523" src="https://github.com/user-attachments/assets/23229e27-12b3-4a78-bcfb-7a4dc5d47c86" />
+### 2. Resolución de Incidencia de Puerto Ocupado
+
+Al desplegar, surgió un conflicto porque el puerto `8080` estaba ocupado por otro contenedor previo. Se solucionó deteniendo los contenedores activos mediante `docker stop $(docker ps -q)`, permitiendo levantar el entorno de nuevo sin problemas.
+
+<img width="960" height="1050" alt="Captura de pantalla 2026-10-09 092537" src="https://github.com/user-attachments/assets/6a09b386-b38c-4423-a2a1-534b553d323b" />
+### 3. Comprobación de la Web en Navegador
+
+Al ingresar a `http://localhost:8080/`, confirmamos que el contenedor sirve correctamente el HTML, CSS y los assets montados en el volumen.
+
+<img width="642" height="277" alt="Captura de pantalla 2026-10-09 093030" src="https://github.com/user-attachments/assets/87662c85-b689-40fc-8b65-f9bb23a491e9" />
+
+### 4. Auditoría de Seguridad y Hardening (Cabeceras HTTP)
+
+Para validar la seguridad del servidor web, se ejecutó en la terminal el comando `curl.exe -I http://localhost:8080`. Esto realiza una petición HEAD que devuelve únicamente las cabeceras HTTP de respuesta.
+
+Se comprueba que la versión exacta de Nginx permanece oculta gracias a la directiva `server_tokens off;` de nuestro archivo `conf/default.conf`, reduciendo la exposición a posibles vulnerabilidades.
 
 
