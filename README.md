@@ -30,6 +30,10 @@ ngnix-static-poc/
 └── README.md                 # Documentación del proyecto
 ```
 ---
+## wireframe de la web
+<img width="1415" height="693" alt="wireframe" src="https://github.com/user-attachments/assets/58f4c760-29b3-4f52-a613-0c383437c495" />
+Este es el wireframe de la web ya actualizada para el cliete Guadalquivir Cloud Tech.
+
 
 ## 🧪 Validación y Evidencias del Despliegue
 
