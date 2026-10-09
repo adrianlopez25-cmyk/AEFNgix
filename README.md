@@ -28,6 +28,7 @@ ngnix-static-poc/
 │   └── index.html            # Documento principal HTML5
 ├── docker-compose.yml        # Configuración del contenedor y mapeo de volúmenes/puertos
 └── README.md                 # Documentación del proyecto
+```
 ---
 
 ## 🧪 Validación y Evidencias del Despliegue
