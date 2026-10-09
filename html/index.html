@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guadalquivir Cloud Tech - PoC Infraestructura</title>
-    <link rel="stylesheet" href="css/styles.css">   
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <span class="badge">Sprint 1 . PoC Aprobada</span>
-        <h1>Guadalquivir Cloud Tech - PoC Infraestructura</h1>
-        <
+        <header>
+            <img src="img/guadalquivir-recorrido.webp" alt="Guadalquivir Cloud Tech Logo" class="logo">
+            <span class="badge">Sprint 1 • PoC Aprobada</span>
+            <h1>Guadalquivir Cloud Tech</h1>
+            <p class="subtitle">Validación de Infraestructura sobre Contenedores Nginx</p>
+        </header>
 
+        <main>
+            <section class="card">
+                <h2>Estado del Despliegue</h2>
+                <ul>
+                    <li><strong>Servidor Web:</strong> Nginx (Alpine Container)</li>
+                    <li><strong>Mapeo de Puerto:</strong> Host 8080 &rarr; Contenedor 80</li>
+                    <li><strong>Montaje:</strong> Bind Mount activo (Persistencia/Caliente)</li>
+                    <li><strong>Hardening:</strong> Cabeceras HTTP seguras + Server Tokens Off</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Guadalquivir Cloud Tech | Módulo DAW0614 - Campus Cámara Sevilla</p>
+        </footer>
+    </div>
 </body>
 </html>
