@@ -1,4 +1,4 @@
-# 🚀 PoC Infraestructura Web - Guadalquivir Cloud Tech
+# PoC Infraestructura Web - Guadalquivir Cloud Tech
 
 Prueba de Concepto (PoC) para el despliegue y validación de una plataforma web estática en un entorno contenedorizado sobre **Nginx** y **Docker Compose**.
 
@@ -39,7 +39,7 @@ Este es el wireframe de la web ya actualizada para el cliete Guadalquivir Cloud 
 
 
 
-## 🧪 Validación y Evidencias del Despliegue
+## Validación y Evidencias del Despliegue
 
 ### 1. Puesta en Marcha del Contenedor
 
@@ -64,10 +64,15 @@ Inspección de registros del contenedor mediante docker compose logs --tail=15, 
 <img width="658" height="211" alt="image" src="https://github.com/user-attachments/assets/bacd3793-0d9e-48d0-888e-6ac0fb2703f8" />
 
 
-### 4. Auditoría de Seguridad y Hardening (Cabeceras HTTP)
+## 4. Resolución de Incidencia Simulada (#INC-2026-081)
 
-Para validar la seguridad del servidor web, se ejecutó en la terminal el comando `curl.exe -I http://localhost:8080`. Esto realiza una petición HEAD que devuelve únicamente las cabeceras HTTP de respuesta.
+**Descripción:** Errores 403 Forbidden / 404 Not Found tras la actualización de assets e imágenes.
 
-Se comprueba que la versión exacta de Nginx permanece oculta gracias a la directiva `server_tokens off;` de nuestro archivo `conf/default.conf`, reduciendo la exposición a posibles vulnerabilidades.
+**Pasos de diagnóstico y resolución:**
+1. **Monitorización de logs:** Se ejecutó `docker compose logs -f` para identificar el código de respuesta HTTP exacto emitido por Nginx.
+2. **Auditoría dentro del contenedor:** Se utilizó `docker compose exec web-poc sh` para validar los permisos POSIX del sistema de archivos interno.
+3. **Correcciones aplicadas:**
+   - **Permisos (403):** Se aplicaron permisos de lectura globales (`chmod -R 644 html/`) para asegurar el acceso al usuario `nginx`.
+   - **Diferenciación Mayúsculas/Minúsculas (404):** Se corrigieron las rutas en `index.html` garantizando la correspondencia exacta (case-sensitivity) con el sistema de archivos Linux de Alpine.
 
 
