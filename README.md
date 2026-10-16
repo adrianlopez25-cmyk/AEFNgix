@@ -19,15 +19,20 @@ Prueba de Concepto (PoC) para el despliegue y validación de una plataforma web 
 ```text
 ngnix-static-poc/
 ├── conf/
-│   └── default.conf          # Configuración del servidor web (VirtualHost + Hardening)
+│   └── default.conf
 ├── html/
 │   ├── css/
-│   │   └── style.css         # Estilos visuales de la aplicación
+│   │   └── style.css
 │   ├── img/
-│   │   └── guadalquivir-recorrido.webp  # Imagen estática de la landing page
-│   └── index.html            # Documento principal HTML5
-├── docker-compose.yml        # Configuración del contenedor y mapeo de volúmenes/puertos
-└── README.md                 # Documentación del proyecto
+│   │   └── guadalquivir-recorrido.webp
+│   └── index.html
+├── capturas/                     
+│   ├── Captura de pantalla 2026-10...
+│   └── ...
+├── .dockerignore
+├── docker-compose.yml
+├── Dockerfile                    
+└── README.md
 ```
 ---
 ## wireframe de la web
