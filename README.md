@@ -35,6 +35,21 @@ ngnix-static-poc/
 └── README.md
 ```
 ---
+## Justificación Técnica de Hardening
+Se han configurado parámetros de seguridad en el archivo conf/default.conf para proteger el servidor según los estándares recomendados por OWASP:
+
+server_tokens off;: Desactiva la firma y versión de Nginx en las cabeceras HTTP de respuesta (Server: nginx), evitando que atacantes identifiquen vulnerabilidades conocidas asociadas a versiones específicas (CVE).
+
+X-Frame-Options "SAMEORIGIN": Protege la aplicación contra ataques de Clickjacking evitando que el sitio sea incrustado en elementos <iframe> de dominios de terceros.
+
+X-Content-Type-Options "nosniff": Fuerza a los navegadores a respetar el tipo MIME enviado por el servidor, bloqueando el MIME-sniffing.
+
+X-XSS-Protection "1; mode=block": Activa la protección contra ataques Cross-Site Scripting (XSS) en navegadores compatibles.
+
+Montaje de solo lectura (:ro): En docker-compose.yml los volúmenes están montados en modo :ro, garantizando la inmutabilidad de los archivos dentro del contenedor ante posibles brechas de seguridad
+
+---
+
 ## wireframe de la web
 <img width="1415" height="693" alt="wireframe" src="https://github.com/user-attachments/assets/58f4c760-29b3-4f52-a613-0c383437c495" />
 Este es el wireframe de la web ya actualizada para el cliete Guadalquivir Cloud Tech.
