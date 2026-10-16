@@ -1,4 +1,4 @@
-# 🚀 PoC Infraestructura Web - Guadalquivir Cloud Tech
+# PoC Infraestructura Web - Guadalquivir Cloud Tech
 
 Prueba de Concepto (PoC) para el despliegue y validación de una plataforma web estática en un entorno contenedorizado sobre **Nginx** y **Docker Compose**.
 
@@ -39,7 +39,7 @@ Este es el wireframe de la web ya actualizada para el cliete Guadalquivir Cloud 
 
 
 
-## 🧪 Validación y Evidencias del Despliegue
+## Validación y Evidencias del Despliegue
 
 ### 1. Puesta en Marcha del Contenedor
 
