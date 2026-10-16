@@ -60,6 +60,9 @@ Al ingresar a `http://localhost:8080/`, confirmamos que el contenedor sirve corr
 También he comprobado el estado de la web.
 <img width="955" height="1003" alt="image" src="https://github.com/user-attachments/assets/783c2a7e-4cd0-4b37-bd81-d06e0c33f72b" />
 
+Inspección de registros del contenedor mediante docker compose logs --tail=15, confirmando la captura de la petición HTTP GET con respuesta 200 OK
+<img width="658" height="211" alt="image" src="https://github.com/user-attachments/assets/bacd3793-0d9e-48d0-888e-6ac0fb2703f8" />
+
 
 ### 4. Auditoría de Seguridad y Hardening (Cabeceras HTTP)
 
