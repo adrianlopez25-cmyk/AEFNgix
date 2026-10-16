@@ -30,6 +30,14 @@ ngnix-static-poc/
 └── README.md                 # Documentación del proyecto
 ```
 ---
+## wireframe de la web
+<img width="1415" height="693" alt="wireframe" src="https://github.com/user-attachments/assets/58f4c760-29b3-4f52-a613-0c383437c495" />
+Este es el wireframe de la web ya actualizada para el cliete Guadalquivir Cloud Tech.
+
+## Landing ya en funcionando
+<img width="1919" height="997" alt="image" src="https://github.com/user-attachments/assets/80ee47a9-a398-4933-b520-4c775c2943aa" />
+
+
 
 ## 🧪 Validación y Evidencias del Despliegue
 
@@ -48,6 +56,13 @@ Al desplegar, surgió un conflicto porque el puerto `8080` estaba ocupado por ot
 Al ingresar a `http://localhost:8080/`, confirmamos que el contenedor sirve correctamente el HTML, CSS y los assets montados en el volumen.
 
 <img width="642" height="277" alt="Captura de pantalla 2026-10-09 093030" src="https://github.com/user-attachments/assets/87662c85-b689-40fc-8b65-f9bb23a491e9" />
+
+También he comprobado el estado de la web.
+<img width="955" height="1003" alt="image" src="https://github.com/user-attachments/assets/783c2a7e-4cd0-4b37-bd81-d06e0c33f72b" />
+
+Inspección de registros del contenedor mediante docker compose logs --tail=15, confirmando la captura de la petición HTTP GET con respuesta 200 OK
+<img width="658" height="211" alt="image" src="https://github.com/user-attachments/assets/bacd3793-0d9e-48d0-888e-6ac0fb2703f8" />
+
 
 ### 4. Auditoría de Seguridad y Hardening (Cabeceras HTTP)
 
