@@ -57,6 +57,10 @@ Al ingresar a `http://localhost:8080/`, confirmamos que el contenedor sirve corr
 
 <img width="642" height="277" alt="Captura de pantalla 2026-10-09 093030" src="https://github.com/user-attachments/assets/87662c85-b689-40fc-8b65-f9bb23a491e9" />
 
+También he comprobado el estado de la web.
+<img width="955" height="1003" alt="image" src="https://github.com/user-attachments/assets/783c2a7e-4cd0-4b37-bd81-d06e0c33f72b" />
+
+
 ### 4. Auditoría de Seguridad y Hardening (Cabeceras HTTP)
 
 Para validar la seguridad del servidor web, se ejecutó en la terminal el comando `curl.exe -I http://localhost:8080`. Esto realiza una petición HEAD que devuelve únicamente las cabeceras HTTP de respuesta.
